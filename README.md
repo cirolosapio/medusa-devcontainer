@@ -2,7 +2,7 @@
 
 Medusa v2 has been [recently announced](https://github.com/medusajs/medusa/releases/tag/v2.0-preview), if you want to try it out, you can use this template to create a dev container for it.
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=824511781)
 
 For a more in-depth exploration of the major upgrade, refer to the [new documentation](https://docs.medusajs.com/v2).
 
