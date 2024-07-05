@@ -11,12 +11,13 @@ services:
   postgres:
     image: postgres:alpine
     ports: [ 5432:5432 ]
+    command: postgres -c ssl=on -c ssl_cert_file=/var/lib/postgresql/server.crt -c ssl_key_file=/var/lib/postgresql/server.key
     environment:
       POSTGRES_PASSWORD: postgres
     volumes:
       - pgsql:/var/lib/postgresql/data:rw
-      - ./server.key:/var/lib/postgresql/data/server.key
-      - ./server.crt:/var/lib/postgresql/data/server.crt
+      - ./server.key:/var/lib/postgresql/server.key
+      - ./server.crt:/var/lib/postgresql/server.crt
 
   mailpit:
     image: axllent/mailpit
