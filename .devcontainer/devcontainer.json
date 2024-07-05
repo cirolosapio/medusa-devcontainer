@@ -1,0 +1,35 @@
+{
+  "dockerComposeFile": "compose.yml",
+  "workspaceFolder": "/app",
+  "service": "app",
+  "containerUser": "vscode",
+  "runServices": [
+    "postgres",
+    "mailpit"
+  ],
+  "features": {
+    "ghcr.io/cirolosapio/devcontainers-features/alpine-user": {},
+    "ghcr.io/cirolosapio/devcontainers-features/alpine-docker": {},
+    "ghcr.io/cirolosapio/devcontainers-features/alpine-starship": {},
+    "ghcr.io/cirolosapio/devcontainers-features/alpine-ohmyzsh": {},
+    "ghcr.io/cirolosapio/devcontainers-features/alpine-node": {
+      // "globalPackages": ""
+    }
+  },
+  "initializeCommand": ".devcontainer/generate-keys.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "eamodio.gitlens",
+        "mikestead.dotenv",
+        "oderwat.indent-rainbow",
+        "usernamehw.errorlens",
+        "shd101wyy.markdown-preview-enhanced",
+        "yzhang.markdown-all-in-one",
+        "DavidAnson.vscode-markdownlint",
+        "github.vscode-github-actions",
+        "GitHub.copilot"
+      ]
+    }
+  }
+}

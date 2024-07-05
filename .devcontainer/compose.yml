@@ -1,0 +1,26 @@
+name: medusa-two_devcontainer
+
+services:
+  app:
+    image: alpine
+    command: top
+    volumes:
+      - ..:/app:cached
+      - ~/.zsh_history:/home/vscode/.zsh_history:rw
+
+  postgres:
+    image: postgres:alpine
+    ports: [ 5432:5432 ]
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pgsql:/var/lib/postgresql/data:rw
+      - ./server.key:/var/lib/postgresql/data/server.key
+      - ./server.crt:/var/lib/postgresql/data/server.crt
+
+  mailpit:
+    image: axllent/mailpit
+    ports: [ 8025:8025 ]
+
+volumes:
+  pgsql:
