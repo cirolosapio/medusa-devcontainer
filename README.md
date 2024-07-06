@@ -28,3 +28,19 @@ npx create-medusa-app@preview --db-url "postgres://postgres:postgres@postgres:54
 ```bash
 npx create-medusa-app@preview --db-url "postgres://postgres:postgres@postgres:5432/postgres"
 ```
+
+## Storefront
+
+To create a new storefront, you can use the following command:
+
+> The Next.js Starter is currently in development to fully support Medusa v2.
+
+```bash
+git clone https://github.com/medusajs/nextjs-starter-medusa -b v2 storefront
+```
+
+## Redis
+
+An instance of redis is already running in the dev container.
+You should update in your `{PROJECT}/.env` the `REDIS_URL` key with the value `redis://redis:6379`.
+Also, you should update the `medusa-config.js` file adding the `redisUrl` property to `process.env.REDIS_URL`.
