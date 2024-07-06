@@ -44,10 +44,16 @@ To create a new storefront, you can use the following command:
 git clone https://github.com/medusajs/nextjs-starter-medusa -b v2 storefront
 ```
 
+Create an `.env.local` file in the storefront directory with the following command:
+
+```bash
+mv .env.template .env.local
+```
+
 To install the dependencies and start the storefront, run the following commands:
 
 ```bash
-cd {YOUR_PROJECT}
+cd storefront
 ni
 nr dev
 ```
