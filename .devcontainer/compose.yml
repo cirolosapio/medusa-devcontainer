@@ -20,10 +20,6 @@ services:
     volumes:
       - pgsql:/var/lib/postgresql/data:rw
 
-  mailpit:
-    image: axllent/mailpit
-    ports: [ 8025:8025 ]
-
   redis:
     image: redis:alpine
     volumes: [ redis:/data ]
