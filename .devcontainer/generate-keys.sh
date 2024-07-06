@@ -14,6 +14,4 @@ chmod 600 server.key
 # Generate a self-signed certificate
 openssl req -new -x509 -days 365 -key server.key -out server.crt -subj "/CN=localhost"
 
-chown 70:70 server.key
-
 exit 0
